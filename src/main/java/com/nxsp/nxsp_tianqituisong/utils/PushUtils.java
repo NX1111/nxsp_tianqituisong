@@ -68,11 +68,11 @@ public class PushUtils {
 
         //阳历生日祝福语
         if(JiNianRiUtils.getBirthdayBySolar().get("days")  == 0  ){
-            solarBirthLogo = "❤"+ " 宝贝破壳" + JiNianRiUtils.getBirthdayBySolar().get("oldYears") +  "年啦！牛牛祝平平生日快乐鸭！"+"❤";
+            solarBirthLogo = "❤"+ " 宝贝破壳" + JiNianRiUtils.getBirthdayBySolar().get("oldYears") +  "年啦！祝生日快乐鸭！"+"❤";
         }
         //农历生日祝福语
         if( JiNianRiUtils.getBirthdayByLunar().get("days") ==0 ){
-            lunarBirthLogo = "❤"+ " 宝贝破壳" + JiNianRiUtils.getBirthdayBySolar().get("oldYears") +  "年啦！牛牛祝平平生日快乐鸭！"+"❤";
+            lunarBirthLogo = "❤"+ " 宝贝破壳" + JiNianRiUtils.getBirthdayBySolar().get("oldYears") +  "年啦！祝生日快乐鸭！"+"❤";
         }
         templateMessage.addData(new WxMpTemplateData("solarBirthLogo",solarBirthLogo,"#FF0000"));
         templateMessage.addData(new WxMpTemplateData("lunarBirthLogo",lunarBirthLogo,"#FF0000"));
