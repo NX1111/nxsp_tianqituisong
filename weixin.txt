@@ -1,9 +1,0 @@
-{{riqi.DATA}} {{beizhu.DATA}} 
-城市：杭州市
-天气：{{tianqi.DATA}} 
-最低气温：{{low.DATA}}度 
-最高气温：{{high.DATA}}度 
-今天是我们恋爱的第{{lianai.DATA}}天 
-距离平平的生日还有{{shengri.DATA}}天 
-{{caihongpi.DATA}} 
-{{jinju.DATA}}

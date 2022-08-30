@@ -1,0 +1,17 @@
+{{love.DATA}} {{riqi.DATA}} {{love.DATA}}
+
+城市：{{city.DATA}}
+天气：{{tianqi.DATA}} 
+当前温度：{{temp.DATA}}度
+最低气温：{{low.DATA}}度 
+最高气温：{{high.DATA}}度 
+风力：{{wc_day.DATA}}
+风向：{{wd_day.DATA}}
+{{solarBirthLogo.DATA}} 
+{{love.DATA}} 距离宝贝的阳历生日还有 {{solarBirth.DATA}} 天 {{love.DATA}} 
+{{lunarBirthLogo.DATA}} 
+{{love.DATA}} 距离宝贝的农历生日还有 {{lunarBirth.DATA}} 天 {{love.DATA}} 
+{{lianaiLogo.DATA}} 
+{{love.DATA}} 今天是我们恋爱的第 {{lianai.DATA}} 天 {{love.DATA}} 
+
+{{caihongpi.DATA}} 

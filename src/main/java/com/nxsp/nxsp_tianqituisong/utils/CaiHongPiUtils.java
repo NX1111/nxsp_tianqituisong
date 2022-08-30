@@ -2,6 +2,7 @@ package com.nxsp.nxsp_tianqituisong.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.nxsp.nxsp_tianqituisong.configure.PushConfigureProperties;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -11,8 +12,8 @@ import java.net.URL;
 
 public class CaiHongPiUtils {
     public static String getCaiHongPi() {
-        String key = "c907b7f72b1544393e1d3f8229aab32a";
-        String httpUrl = "http://api.tianapi.com/caihongpi/index?key="+key;
+        String rainbowKey = PushConfigureProperties.getRainbowKey();
+        String httpUrl = "http://api.tianapi.com/caihongpi/index?key="+rainbowKey;
         BufferedReader reader = null;
         String result = null;
         StringBuffer sbf = new StringBuffer();

@@ -18,10 +18,12 @@ public class Weather {
     private String wc_night;
     private String text_day;
     private String wc_day;
-     // 当前天气
+    //当前天气
     private String text_now;
-     // 当前温度
-     String temp;
+    //当前温度
+    private String temp;
+    //当前城市
+    private String city;
 
 
 }
