@@ -1,23 +1,33 @@
-package com.nxsp.nxsp_tianqituisong.utils;
+package com.nxsp.tianqituisong.utils;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.nxsp.nxsp_tianqituisong.configure.PushConfigureProperties;
-import com.nxsp.nxsp_tianqituisong.pojo.Weather;
+import com.nxsp.tianqituisong.pojo.Weather;
+import org.springframework.stereotype.Component;
+import com.nxsp.tianqituisong.configure.PushConfigureProperties;
 import org.springframework.web.client.RestTemplate;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONArray;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.List;
 
+@Component
 public class WeatherUtils {
 
-    public static Weather getWeather(){
-        RestTemplate restTemplate = new RestTemplate();
-        Map<String,String> map = new HashMap<>();
-        map.put("district_id", PushConfigureProperties.getDistrict_id());
-        map.put("data_type","all");
-        map.put("ak",PushConfigureProperties.getAk());
+    @Resource
+    private PushConfigureProperties pushConfig;
+
+    @Resource
+    private RestTemplate restTemplate;
+
+    public Weather getWeather() {
+        Map<String, String> map = new HashMap<>();
+        // 使用注入的配置对象获取配置值
+        map.put("district_id", pushConfig.getDistrictId());
+        map.put("data_type", "all");
+        map.put("ak", pushConfig.getAk());
+
         String res = restTemplate.getForObject(
                 "https://api.map.baidu.com/weather/v1/?district_id={district_id}&data_type={data_type}&ak={ak}",
                 String.class,
@@ -36,5 +46,4 @@ public class WeatherUtils {
 
         return weather;
     }
-
 }

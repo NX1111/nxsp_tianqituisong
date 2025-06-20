@@ -1,4 +1,4 @@
-package com.nxsp.nxsp_tianqituisong.pojo;
+package com.nxsp.tianqituisong.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

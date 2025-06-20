@@ -1,4 +1,4 @@
-package com.nxsp.nxsp_tianqituisong.DateUtils;
+package com.nxsp.tianqituisong.DateUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
