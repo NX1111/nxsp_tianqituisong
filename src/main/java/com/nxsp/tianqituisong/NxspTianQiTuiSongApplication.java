@@ -45,16 +45,4 @@ public class NxspTianQiTuiSongApplication {
         SpringApplication.run(NxspTianQiTuiSongApplication.class, args);
     }
 
-    /**
-     * 配置定时任务线程池
-     */
-    @Bean
-    public ThreadPoolTaskScheduler taskScheduler() {
-        ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();
-        scheduler.setPoolSize(5);
-        scheduler.setThreadNamePrefix("scheduled-task-");
-        scheduler.setAwaitTerminationSeconds(60);
-        scheduler.setWaitForTasksToCompleteOnShutdown(true);
-        return scheduler;
-    }
 }

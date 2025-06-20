@@ -10,16 +10,8 @@ spring:
         group: ${NACOS_GROUP:NX_GROUP}
         username: ${NACOS_USERNAME:nacos}
         password: ${NACOS_PASSWORD:nacos}
-        # 确保这些属性在 config.import 之前定义
-        refresh-enabled: true
-        shared-configs:
-          - data-id: common.properties
-            group: ${NACOS_GROUP:NX_GROUP}
-            refresh: true
-          - data-id: common_A.properties
-            group: ${NACOS_GROUP:NX_GROUP}
-            refresh: true
-        name: ${spring.application.name}
+        refresh-enabled: true  # 保留刷新功能
+        # 完全删除 shared-configs 块
       discovery:
         server-addr: ${NACOS_HOST:192.168.31.206}:8848
         username: ${NACOS_USERNAME:nacos}
@@ -27,9 +19,10 @@ spring:
         namespace: ${NACOS_NAMESPACE:beb8479d-da1c-4132-b781-91f284836210}
         group: ${NACOS_GROUP:NX_GROUP}
 
-  # 关键配置 - 必须放在 cloud.nacos 后面
   config:
     import:
+      # 应用专属配置
       - optional:nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}?group=${spring.cloud.nacos.config.group}
+      # 共享配置（显式导入）
       - optional:nacos:common.properties?group=${spring.cloud.nacos.config.group}
       - optional:nacos:common_A.properties?group=${spring.cloud.nacos.config.group}
