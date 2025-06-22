@@ -1,6 +1,5 @@
 package com.nxsp.tianqituisong.controller;
 
-import com.nxsp.tianqituisong.service.ScheduledPushServiceImpl;
 import com.nxsp.tianqituisong.service.impl.TimedPushservice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
