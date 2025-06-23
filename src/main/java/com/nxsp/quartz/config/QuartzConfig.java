@@ -12,7 +12,7 @@ public class QuartzConfig {
     @Bean
     public JobDetail sampleJobDetail() {
         return JobBuilder.newJob(MyJob.class)
-                .withIdentity("sampleJob")
+                .withIdentity("pushMessageJob")
                 .usingJobData("param", "任务参数示例")
                 .storeDurably() // 持久化存储
                 .build();
@@ -24,7 +24,7 @@ public class QuartzConfig {
         return TriggerBuilder.newTrigger()
                 .forJob(sampleJobDetail())
                 .withIdentity("cronTrigger")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/2 * * * * ? *")) //
+                .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * * * * ? *")) //
                 .build();
     }
 }
