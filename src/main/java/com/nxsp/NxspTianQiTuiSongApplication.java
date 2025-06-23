@@ -1,4 +1,4 @@
-package com.nxsp.tianqituisong;
+package com.nxsp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

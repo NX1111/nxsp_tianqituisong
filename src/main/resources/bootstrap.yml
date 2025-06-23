@@ -26,3 +26,4 @@ spring:
       # 共享配置（显式导入）
       - optional:nacos:common.properties?group=${spring.cloud.nacos.config.group}
       - optional:nacos:common_A.properties?group=${spring.cloud.nacos.config.group}
+      - optional:nacos:quartz-config.properties?group=${spring.cloud.nacos.config.group}
